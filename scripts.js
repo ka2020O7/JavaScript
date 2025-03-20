@@ -76,14 +76,42 @@ mensagemPersonalizada("kauan", "Bom dia!");
 //////////////////////////////////
 
 
-function media(n1, n2, n3){
+function media(numero1, numero2, numero3){
 
-    media = (Number(n1) + Number(n2) + Number(n3))/3 ;
+    media = (Number(numero1) + Number(numero2) + Number(numero3))/3 ;
     console.log(media);
     }
-    media(prompt("N1"), prompt("N2: "), prompt("N3: "));
+    media(prompt("numero1:"), prompt("numero2: "), prompt("numero3: "));
+
+
+
+
+
+/////////////////////////////////
+
+
+for(multiplo=1; multiplo<=20; multiplo++){
+    if (multiplo % 3 == 0)
+    {
+       console.log(multiplo + " multiplo de 3");
+    }else{
+        console.log(multiplo + " não é multiplo de 3");
+    }
+
+}
 
 
 ///////////////////////////////////
 
 
+function verificarPalindromo(str){
+    str2 = str.split(" ");
+    str2 = str2.reverse();
+    str2 = str2.join(" ");
+    return console.log(str === str2);
+
+}
+verificarpalindromo(prompt("Digite algo"))
+
+
+////////////////////////////////////
