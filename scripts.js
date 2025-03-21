@@ -114,4 +114,55 @@ function verificarPalindromo(str){
 verificarpalindromo(prompt("Digite algo"))
 
 
-////////////////////////////////////
+/////11///////////////////////////////
+
+
+
+function verificarSinal(x) {
+    if (x > 0){console.log("Positivo")}
+    if (x < 0){console.log("Negativo")}
+    if (x = 0){console.log("Zero")}
+    }
+    let frase = prompt("Digite um número: ");
+    verificarSinal(frase);
+    
+
+///////12/////////////////////////// 
+  
+
+let texto2 = prompt("qual a temperatura em celsiuns")
+ function ConverterFunction(celsiun) {
+    let faren = (celsius *(9/5)) + 32;
+    console.log ("essa temperatura é em fahrenheit" + faren)
+}
+
+ConverterFunction(texto2)
+///////13/////////////////////////// 
+
+
+
+///////14/////////////////////////// 
+
+
+function substituirPalavra(text){
+    console.log(text.replace(/azul/g, "vermelho"));
+}
+
+let texto = prompt("Digite o texto: ");
+substituirPalavra(texto);
+
+
+///////20/////////////////////////// 
+
+
+let palavra = prompt("Digite a palavra");
+function contarVogais(palavra){
+    
+    const vogais = aeiouAEIOU;
+    let contador = 0;
+    for (let letra of palavra){
+    if (vogais.includes(letra)) {
+        contador++
+    }   
+    }
+}
