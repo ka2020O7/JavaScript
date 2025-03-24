@@ -30,10 +30,12 @@ console .log (calcular(10,4))
 ///////////////////////////////////
 
 let contador = 10;
+
 while (contador > 0) {
     console.log(contador);
-    contador--;
+    contador--; 
 }
+
 
 ///////////////////////////////////
 
@@ -137,9 +139,19 @@ let texto2 = prompt("qual a temperatura em celsiuns")
 }
 
 ConverterFunction(texto2)
+
+
 ///////13/////////////////////////// 
 
+let soma = 0;
+let numero = 1; 
 
+while (numero <= 100) {
+soma = soma + numero;
+numero++;
+}   
+
+console.log("A soma dos números de 1 até 100 é " + soma);
 
 ///////14/////////////////////////// 
 
@@ -151,7 +163,57 @@ function substituirPalavra(text){
 let texto = prompt("Digite o texto: ");
 substituirPalavra(texto);
 
+///////15/////////////////////////// 
 
+function verificarTamanho(str) {
+    let tamanho = str.length; 
+    
+    if (tamanho > 10) {
+        console.log("A string tem mais de 10 caracteres.");
+    } else {
+        console.log("A string não tem mais de 10 caracteres.");
+    }
+     }
+    
+    let entrada = prompt("Digite uma string para verificar o tamanho:");
+    verificarTamanho(entrada);
+
+///////16/////////////////////////// 
+
+let fruta= ["uva", "banana", "laranja", "melão"];
+console.log(fruta[2]);
+
+///////17/////////////////////////// 
+
+
+function saudacao(nome, saudacao = "Bem-vindo(a)") {
+    return `${saudacao}, ${nome}!`;
+}
+
+let nomeUsuario = prompt("Digite seu nome: ");
+let mensagem = saudacao(nomeUsuario);
+console.log(mensagem);
+
+///////18/////////////////////////// 
+
+
+function verificarAprovacao(nota) {
+    return nota >= 6 ? "Aprovado" : "Reprovado";
+   }
+   
+   let resultado = verificarAprovacao(parseFloat(prompt("Digite sua nota:")));
+   console.log(resultado);
+   
+
+///////19/////////////////////////// 
+
+console.log("Números pares de 0 a 30:");
+for (let i = 0; i <= 30; i++) {
+if (i % 2 === 0) {
+   console.log(i);
+}
+}
+ 
 ///////20/////////////////////////// 
 
 
@@ -166,3 +228,41 @@ function contarVogais(palavra){
     }   
     }
 }
+
+
+ /////ex21///////////////////////////
+    
+ function somarArray(num){
+    let sum = num.reduce((partialSum, a) => partialSum + a, 0);
+    console.log(sum);
+}
+
+somarArray([1, 2, 3]);
+
+
+/////ex22/////////////////////////////
+
+const dobrarNumero = numero => numero * 2;
+console.log("O dobro é: " + dobrarNumero(prompt("Digite um número para dobrar:")));
+
+
+/////ex23///////////////////////////// 
+
+let contador = 2;
+while (contador <= 20) {
+    console.log(contador);
+    contador += 2; 
+}
+
+
+/////ex24/////////////////////////////
+
+const capitalizar = str => str.charAt(0).toUpperCase() + str.slice(1);
+console.log(capitalizar(prompt("Digite uma palavra:")));
+
+
+/////ex25///////////////////////////// 
+
+const anoBissexto = ano => (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
+console.log(anoBissexto(parseInt(prompt("Digite um ano:")))
+? "É bissexto." : "Não é bissexto.")
